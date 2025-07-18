@@ -4,18 +4,14 @@
         color: white;
         padding: auto;
     }
-
     .Menu-section {
         display: flex;
         justify-content: center;
         align-items: center;
-    
     }
-
     .product-category{
         width: 200px;
     }   
-    
     .search-product{
        color: rgb(137, 6, 6);
     }
@@ -26,10 +22,12 @@
         color: rgb(32, 6, 137);
     }
     .product-item {
-        width: 320px; /* hoặc 100% nếu responsive */
-        background: #107e6a; /* hoặc #fff nếu muốn nền sáng */
+        background: #393552;
         border-radius: 16px;
         box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+        border: 1.5px solid #7c3aed;
+        color: #e0e0e6;
+        width: 360px;
         padding: 20px;
         margin: 24px auto;
         display: flex;
@@ -46,25 +44,29 @@
     .product-name {
         font-size: 20px;
         font-weight: bold;
-        color: #fff; /* hoặc #222 nếu nền sáng */
+        color: #e0e0e6;
         margin-bottom: 8px;
     }
     .product-price {
         font-size: 18px;
-        color: #fff; /* hoặc #333 nếu nền sáng */
+        color: #e0e0e6;
     }
     .product-rating {
         color: yellow;
-
+        margin-top: -10px;
     }
-    .product-action {
+    .product-actions {
         display: flex;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 15px;
     }
     .space-x {
         margin: 0 10px;
     }
+    .fa-star {
+        margin: 0 4px;
+    }
+    
 </style>
 <!-- Home -->
 <div class="container">
@@ -74,11 +76,11 @@
     </div>
 <!-- Search -->
     <div class="Menu-section">
-        <input type="text" class="form-control search-product" placeholder="Nhap ten san pham">
+        <input type="text" class="form-control search-product" placeholder="Nhập tên sản phẩm">
         <select class="form-control product-category" >
-            <option selected disabled>Chon danh muc</option>
-            <option value="1">Do dien tu</option>
-            <option value="2">Gia dung</option>
+            <option selected disabled>Chọn danh mục</option>
+            <option value="1">Nam</option>
+            <option value="2">Nữ</option>
         </select>
     </div>
 <!-- Product -->
