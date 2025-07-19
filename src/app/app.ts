@@ -1,14 +1,21 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, signal, inject } from '@angular/core';
+import { RouterOutlet, Router } from '@angular/router';
 import { Header } from './header/header';
 import { Footer } from './footer/footer';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterOutlet, Header, Footer],
+  imports: [RouterOutlet, Header, Footer, NgIf],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
   protected readonly title = signal('ShopappAG');
+  private router = inject(Router);
+
+  isRegisterPage() {
+    // Chỉ ẩn header/footer ở đúng trang register
+    return this.router.url.startsWith('/register');
+  }
 }
