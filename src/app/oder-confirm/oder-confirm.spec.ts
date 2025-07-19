@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Home } from './home';
+import { OderConfirm } from './oder-confirm';
 
-describe('Home', () => {
-  let component: Home;
-  let fixture: ComponentFixture<Home>;
+describe('OderConfirm', () => {
+  let component: OderConfirm;
+  let fixture: ComponentFixture<OderConfirm>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Home]
+      imports: [OderConfirm]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Home);
+    fixture = TestBed.createComponent(OderConfirm);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
