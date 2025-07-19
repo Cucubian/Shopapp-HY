@@ -1,9 +1,10 @@
 {
-    "editor.quickSuggestions": {
-        "comments": "on",
-        "strings": "on"
-    },
-    "emmet.useInlineCompletions": true,
-    "editor.inlineSuggest.enabled": true,
-    "editor.inlineSuggest.suppressSuggestions": true
+  "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.suppressSuggestions": false,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "emmet.useInlineCompletions": true
 }

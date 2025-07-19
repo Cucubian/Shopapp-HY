@@ -1,0 +1,123 @@
+.Intro-section {
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-image {
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.thumbnail-item {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 2px;
+  transition: border 0.2s;
+  cursor: pointer;
+}
+
+.thumbnail-item.active {
+  border: 2px solid #7c3aed;
+}
+
+.thumbnail-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+.product-info {
+  background: #28243c;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 32px 24px;
+  color: #e0e0e6;
+  margin: 24px auto;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.product-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #7c3aed;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 1.3rem;
+  color: #e0e0e6;
+  margin-bottom: 12px;
+}
+.product-price span {
+  color: #ffd600;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.product-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.quantity-input {
+  width: 70px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1.5px solid #7c3aed;
+  background: #1a1830;
+  color: #e0e0e6;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.quantity-input:focus {
+  border: 2px solid #ffd600;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 8px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.08);
+  border: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-primary {
+  background: #7c3aed;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #5b21b6;
+}
+
+.btn-success {
+  background: #22c55e;
+  color: #fff;
+}
+.btn-success:hover {
+  background: #15803d;
+}
