@@ -3,7 +3,7 @@ import { Footer } from "../footer/footer";
 
 @Component({
   selector: 'app-detail-product',
-  imports: [Footer],
+  imports: [],
   templateUrl: './detail-product.html',
   styleUrl: './detail-product.scss'
 })
