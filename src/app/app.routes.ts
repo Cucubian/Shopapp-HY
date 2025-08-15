@@ -7,11 +7,11 @@ import { Login } from './login/login';
 import { Register } from './register/register';
 
 export const routes: Routes = [
-  { path: '', component: Home },
+  { path: '', component: Register },
   { path: 'product-detail', component: DetailProduct},
   { path: 'oder', component: Oder},
   { path: 'oder-confirm', component: OderConfirm},
   { path: 'login', component: Login},
-  { path: 'register', component: Register},
+  { path: 'home', component: Home},
   
 ];

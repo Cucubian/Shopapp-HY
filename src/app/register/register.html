@@ -3,20 +3,44 @@
     <form>
         <div class="register-group">
             <label for="register-name" class="register-label">Họ tên</label>
-            <input type="text" id="register-name" class="register-input" placeholder="Nhập họ tên">
+            <input type="text" id="register-name" class="register-input" placeholder="Nhập họ tên"
+             [(ngModel)]="fullName" 
+             name="fullName"
+             required>
         </div>
         <div class="register-group">
-            <label for="register-email" class="register-label">Email</label>
-            <input type="email" id="register-email" class="register-input" placeholder="Nhập email">
+            <label for="register-phone" class="register-label" >Số điện thoại</label>
+            <input type="text" id="register-phone" class="register-input" placeholder="Nhập số điện thoại" 
+            [(ngModel)]="phone" 
+            (input)="onPhoneChange()"
+            name="phone"
+            required
+            > 
+            <!-- two way data biding - khi go input gia tri se vao bien phone -->
+             <!-- even binding khi co input thi ham khoi chay -->
+
         </div>
-        <div class="register-group">
-            <label for="register-phone" class="register-label">Số điện thoại</label>
-            <input type="text" id="register-phone" class="register-input" placeholder="Nhập số điện thoại">
+           <div class="register-group">
+  <label for="register-birthday" class="register-label">Ngày sinh</label>
+  <input 
+            type="date" 
+            id="register-birthday" 
+            class="register-input"
+            [(ngModel)]="dateOfBirth"
+            name="dateOfBirth"
+            required
+    
+        >     
         </div>
+
         <div class="register-group">
             <label for="register-password" class="register-label">Mật khẩu</label>
             <div class="register-password-wrapper">
-                <input type="password" id="register-password" class="register-input" placeholder="Nhập mật khẩu">
+                <input type="password" id="register-password" class="register-input" placeholder="Nhập mật khẩu" 
+                [(ngModel)]="password" 
+                name="password"
+                required>
+                
                 <span class="register-toggle-password" title="Hiện/ẩn mật khẩu">👁️</span>
             </div>
         </div>
@@ -24,15 +48,38 @@
             <label for="register-password-confirm" class="register-label">Xác nhận mật khẩu</label>
             <div class="register-password-wrapper">
                 <input type="password" id="register-password-confirm" class="register-input"
-                    placeholder="Nhập lại mật khẩu">
+                    placeholder="Nhập lại mật khẩu"
+                    [(ngModel)]="retypePassword" 
+                    name="retypePassword"
+                    required>
                 <span class="register-toggle-password" title="Hiện/ẩn mật khẩu">👁️</span>
             </div>
         </div>
+
         <div class="register-group">
             <label for="register-palace" class="register-label">Địa chỉ </label>
-            <input type="text" id="register-palace" class="register-input" placeholder="Nhập địa chỉ">
+            <input type="text" id="register-palace" class="register-input" placeholder="Nhập địa chỉ"
+            [(ngModel)]="address" 
+            name="address">
         </div>
-        <button type="submit" class="btn register-btn">Đăng ký</button>
+
+         <div class="register-group">
+    <div class="form-check checkbox-text" style="display: flex; align-items: center;">
+        <input 
+            type="checkbox" 
+            class="form-check-input" 
+            id="agree"
+            [(ngModel)]="isAccepted" 
+            name="isAccepted"
+            >
+        <label class="form-check-label text-start" for="agree" style="margin-left: 5px;">
+            Tôi đồng ý với các điều khoản và điều kiện
+        </label>
+    </div>
+</div>
+        <button type="submit" class="btn register-btn"
+        (click)="register()"
+        >Đăng ký</button>
         <div class="register-login">
             Đã có tài khoản? <a href="#" class="register-link">Đăng nhập</a>
         </div>
